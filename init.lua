@@ -802,6 +802,15 @@ require('lazy').setup({
         additional_vim_regex_highlighting = { 'ruby' },
       },
       indent = { enable = true, disable = { 'ruby' } },
+      incremental_selection = {
+        enable = true,
+        keymaps = { -- set to `false` to disable one of the mappings
+          init_selection = 'gnn', -- Get nearest node?
+          node_incremental = 'grn', -- Get recursive node?
+          scope_incremental = 'grc', -- get recursive node?
+          node_decremental = 'grm',
+        },
+      },
     },
     config = function(_, opts)
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
